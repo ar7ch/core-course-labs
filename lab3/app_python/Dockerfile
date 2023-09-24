@@ -24,7 +24,7 @@ RUN \
 FROM staging as production
 # cleanup and hardening
 RUN \
-    rm -f Makefile requirements.txt
-WORKDIR ${appdir}
+    rm -f Makefile requirements.txtA
+WORKDIR app 
 USER ${appuser}
-CMD ["python3", "app_main.py", "0.0.0.0", "80"]
+CMD ["python3", "main.py", "0.0.0.0", "80"]
